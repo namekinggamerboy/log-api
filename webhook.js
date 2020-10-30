@@ -24,11 +24,12 @@ if(!wbhok){
 
   
 
-  webhookClient.send(`${str}`,{
+  webhookClient.send("",{
 
     username: client.user.username,
 
-	avatarURL: client.user.displayAvatarURL()
+	avatarURL: client.user.displayAvatarURL(),
+	embeds: [str]
 
   });
 
@@ -41,12 +42,12 @@ if(!wbhok){
 
     const webhookClient = new Discord.WebhookClient(wbhok.id, wbhok.token);
 
-   webhookClient.send(`${str}`,{
+   webhookClient.send("",{
 
     username: client.user.username,
 
-	avatarURL: client.user.displayAvatarURL()
-
+	avatarURL: client.user.displayAvatarURL(),
+	embeds: [str]
    });
 
 }
