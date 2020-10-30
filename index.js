@@ -27,7 +27,6 @@ spamText(client, channel, modch, Discord){
 },
 
 log(client, channel, Discord){
-let color = "#0099FF";
 
 client.on("messageDelete", message => {
 
@@ -38,7 +37,8 @@ channel: channel,
 discord: Discord,
 bot: client,
 message: new Discord.MessageEmbed()
-.setColor(color)
+.setColor("#FF0000")
+.setAuthor("Message by."+message.author.tag)
 .setTitle("Message Delete")
 .setThumbnail(message.author.displayAvatarURL())
 .setDescription(`Message- ${message.content}\nMessage Channel- ${message.channel.name}`)
