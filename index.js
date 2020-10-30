@@ -29,6 +29,25 @@ spamText(client, channel, modch, Discord){
 log(client, channel, Discord){
 let color = "#0099FF";
 
+client.on("messageDelete", message => {
+
+if(channel.type === "dm") return;
+if(!channel.guild.id === message.guild.id) return;
+sendMsg({
+channel: channel,
+discord: Discord,
+bot: client,
+message: new Discord.MessageEmbed()
+.setColor(color)
+.setTitle("Message Delete")
+.setThumbnail(message.author.displayAvatarURL())
+.setDescription(`Message- ${message.content}\nMessage Channel- ${message.channel.name}`)
+.setImage(message.attachments.first() ? message.attachments.first().proxyURL : "*)
+.setTimestamp();
+});
+
+});
+
  }
 
 };
