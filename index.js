@@ -11,7 +11,23 @@ let color = "#0099FF";
 
  },
 
-spam(client, channel, Discord){
+emojjspam(client, channel, Discord, count){
+
+},
+
+badword(client, channel, Discord, text){
+
+},
+
+link(client, channel, Discord){
+
+},
+
+mentionspam(client, channel, Discord){
+
+},
+
+spamText(client, channel, Discord){
 
 }
 
