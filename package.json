@@ -1,0 +1,11 @@
+{
+  "name": "log-bot",
+  "description": "me royal log channel bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+    "devDependencies": {
+    "eslint": "^7.1.0"
+  }
+}
