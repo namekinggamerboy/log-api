@@ -1,3 +1,3 @@
-exports = (data) => {
+module.exports = (data) => {
 
 };
