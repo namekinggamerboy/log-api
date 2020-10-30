@@ -2,27 +2,27 @@ const sendMsg = require("./webhook.js");
 
 module.exports = {
 
-modlog(client, reason, title, author, mention, Discord){
+modlog(client, reason, title, author, mention, channel, Discord){
  
 },
 
-emojjspam(client, channel, Discord, count){
+emojjspam(client, channel, count, modch, Discord){
 
 },
 
-badword(client, channel, Discord, text){
+badword(client, channel, text, modch, Discord){
 
 },
 
-link(client, channel, Discord){
+link(client, channel, modch, Discord){
 
 },
 
-mentionspam(client, channel, Discord){
+mentionspam(client, channel, modch, Discord){
 
 },
 
-spamText(client, channel, Discord){
+spamText(client, channel, modch, Discord){
 
 },
 
