@@ -84,8 +84,8 @@ discord: Discord,
 bot: client,
 message: new Discord.MessageEmbed()
 .setColor("#FF0000")
-.setAuthor("Message by."+message.author.tag)
-.setTitle("Message Delete")
+.setAuthor("Message Delete")
+.setTitle("Message by."+message.author.tag)
 .setThumbnail(message.author.displayAvatarURL())
 .setDescription(`Message- ${message.content}\nMessage Channel- ${message.channel.name}`)
 .setImage(message.attachments.first() ? message.attachments.first().proxyURL : null)
