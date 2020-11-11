@@ -2,6 +2,8 @@ const sendMsg = require("./webhook.js");
 
 module.exports = {
 
+let st = new Map();
+
 modlog(client, reason, title, author, mention, channel, Discord){
  
 },
@@ -23,6 +25,30 @@ mentionspam(client, channel, modch, Discord){
 },
 
 spamText(client, channel, modch, Discord){
+
+client.on("message", msg => {
+
+if(msg.channel.type === "dm") return;
+if(!msg.channel.guild.id === message.guild.id) return;
+
+if(channel.includes(msg.channel.id)){
+
+  if(st.get(msg.channel.id)){
+  
+if(msg.content === st.get(msg.channel.id)){
+
+ msg.delete().catch( );
+  msg.channel.send({ embed: color: 0xFF0000, title: "spam some Text", description: `${msg.author.id} please no repeat some text` }}).then(md => md.delete({ timeout: 3000 }).catch( );
+ st.delete(msg.channel.id);
+}
+
+  }else {
+  st.set(msg.channel.id, msg.content);
+  }
+
+}
+
+  });
 
 },
 
