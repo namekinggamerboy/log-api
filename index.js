@@ -1,8 +1,8 @@
 const sendMsg = require("./webhook.js");
 
-module.exports = {
+const st = new Map();
 
-let st = new Map();
+module.exports = {
 
 modlog(client, reason, title, author, mention, channel, Discord){
  
