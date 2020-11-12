@@ -37,7 +37,7 @@ if(channel.includes(msg.channel.id)){
 if(msg.content === st.get(msg.channel.id)){
 
  msg.delete().catch( );
-  msg.channel.send({ embed: color: 0xFF0000, title: "spam some Text", description: `${msg.author.id} please no repeat some text` }}).then(md => md.delete({ timeout: 3000 }).catch( );
+  msg.channel.send({ embed: color: 0xFF0000, title: "spam some Text", description: `@${msg.author.tag} please no repeat some text` }}).then(md => md.delete({ timeout: 3000 }).catch( );
  st.delete(msg.channel.id+":"+msg.author.id);
 
   if(modch){
@@ -53,7 +53,7 @@ message: new Discord.MessageEmbed()
 .setColor("#FF0000")
 .setTitle("Spam some Messages")
 .setThumbnail(message.author.displayAvatarURL())
-.setDescription(`**Message Channel**- ${msg.channel.name}\n**Message User**- <@${msg.author.id}>(@${msg.author.tag})\n**Message**-${msg.content.substring(0, 1700)}`)
+.setDescription(`**Message Channel**- ${msg.channel.name}\n**Message User**- <@${msg.author.id}>(@${msg.author.tag})\n**Message**-${msg.content.substring(0, 1600)}\n**Reason**- spam`)
 .setTimestamp();
 }); 
  }
