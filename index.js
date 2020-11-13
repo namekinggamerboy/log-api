@@ -70,10 +70,12 @@ message: new Discord.MessageEmbed()
 
 },
 
-log(client, channel, Discord){
+log(client, Discord){
 
-client.on("messageDelete", message => {
+client.on("messageDelete", async message => {
+let data = await client.guildData.find({ id: message.guild.id }).plugins.mod.logchannel;
 
+let channel = client.channels.cache.get(data);
 if(channel.type === "dm") return;
 if(!channel.guild.id === message.guild.id) return;
 if(channel.id === message.channel.id) return;
