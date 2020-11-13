@@ -53,7 +53,7 @@ message: new Discord.MessageEmbed()
 .setColor("#FF0000")
 .setTitle("Spam some Messages")
 .setThumbnail(message.author.displayAvatarURL())
-.setDescription(`**Message Channel**- ${msg.channel.name}\n**Message User**- <@${msg.author.id}>(@${msg.author.tag})\n**Message**-${msg.content.substring(0, 1600)}\n**Reason**- spam`)
+.setDescription(`**Message Channel**- <#${msg.channel.id}> (#${msg.channel.name})\n**Message User**- <@${msg.author.id}>(@${msg.author.tag})\n**Message**-${msg.content.substring(0, 1600)}\n**Reason**- spam`)
 .setTimestamp();
 }); 
  }
@@ -87,7 +87,8 @@ message: new Discord.MessageEmbed()
 .setAuthor("Message Delete")
 .setTitle("Message by."+message.author.tag)
 .setThumbnail(message.author.displayAvatarURL())
-.setDescription(`**Message**- ${message.content ? message.content.substring(0, 1830) : message.embeds.description.substring(0, 1830)}\nMessage Channel- ${message.channel.name}`)
+.setDescription(`**Message**- ${message.content ? message.content.substring(0, 1830) : message.embeds.description.substring(0, 1830)}`)
+.addField("Message Channel-", `<#${message.channel.id}> (#${message.channel.name})`)
 .setImage(message.attachments.first() ? message.attachments.first().proxyURL : null)
 .setTimestamp();
 });
