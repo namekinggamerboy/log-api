@@ -87,7 +87,7 @@ message: new Discord.MessageEmbed()
 .setAuthor("Message Delete")
 .setTitle("Message by."+message.author.tag)
 .setThumbnail(message.author.displayAvatarURL())
-.setDescription(`**Message**- ${message.content ? message.content.substring(0, 1850) : message.embeds.description}\nMessage Channel- ${message.channel.name}`)
+.setDescription(`**Message**- ${message.content ? message.content.substring(0, 1830) : message.embeds.description.substring(0, 1830)}\nMessage Channel- ${message.channel.name}`)
 .setImage(message.attachments.first() ? message.attachments.first().proxyURL : null)
 .setTimestamp();
 });
