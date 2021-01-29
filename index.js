@@ -37,7 +37,7 @@ if(channel.includes(msg.channel.id)){
 if(msg.content === st.get(msg.channel.id)){
 
  msg.delete().catch( );
-  msg.channel.send({ embed: color: 0xFF0000, title: "spam some Text", description: `@${msg.author.tag} please no repeat some text` }}).then(md => md.delete({ timeout: 3000 }).catch( );
+  msg.channel.send({ embed: { color: 0xFF0000, title: "spam some Text", description: `@${msg.author.tag} please no repeat some text` }}).then(md => md.delete({ timeout: 3000 })).catch( );
  st.delete(msg.channel.id+":"+msg.author.id);
 
   if(modch){
