@@ -5,6 +5,9 @@
   "scripts": {
     "start": "node index.js"
   },
+   "dependencies": {
+    "anti-raid": "^1.1.0"
+    },
     "devDependencies": {
     "eslint": "^7.1.0"
   }
